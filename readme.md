@@ -1,10 +1,17 @@
-# Vault (Laravel 5 Package)
+# Vault (Laravel 5.0.* Package)
 
 [![Project Status](http://stillmaintained.com/rappasoft/vault.png)](http://stillmaintained.com/rappasoft/vault)
 [![Build Status](https://scrutinizer-ci.com/g/rappasoft/vault/badges/build.png?b=master)](https://scrutinizer-ci.com/g/rappasoft/vault/build-status/master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/rappasoft/vault/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/rappasoft/vault/?branch=master)
 [![Total Downloads](https://poser.pugx.org/rappasoft/vault/downloads.svg)](https://packagist.org/packages/rappasoft/vault)
 [![License](https://poser.pugx.org/rappasoft/vault/license.svg)](https://packagist.org/packages/rappasoft/vault)
+
+PLEASE READ FIRST: 
+English
+This is the same repo from Rappasoft/Vault and you can find it here [Vault From Rappasoft](https://github.com/rappasoft/vault) this package was created only to add support for those projects created in Laravel 5.0.*. If you use Laravel 5.1.* you need to download the orginal one!
+
+Español
+Este es el mismo repositorio de Rappasoft/Vault y lo puedes encontrar aqui [Vault From Rappasoft](https://github.com/rappasoft/vault) este paquete fue creado solo para añadir soporte a aquellos proyectos creados en Laravel 5.0.*. Si tu usas Laravel 5.1.* necesitas descargar el paquete original!
 
 Vault is a simple yet powerful access control system for the new Laravel 5 Framework. It comes with a backend user interface to manage users, roles, and permissions as well as the relationships between them.
 
