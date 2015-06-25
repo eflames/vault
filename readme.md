@@ -7,6 +7,7 @@
 [![License](https://poser.pugx.org/rappasoft/vault/license.svg)](https://packagist.org/packages/rappasoft/vault)
 
 PLEASE READ FIRST: 
+
 English
 This is the same repo from Rappasoft/Vault and you can find it here [Vault From Rappasoft](https://github.com/rappasoft/vault) this package was created only to add support for those projects created in Laravel 5.0.*. If you use Laravel 5.1.* you need to download the orginal one!
 
@@ -53,7 +54,7 @@ Vault is a simple yet powerful access control system for the new Laravel 5 Frame
 
 In the `require` key of `composer.json` file add the following
 
-    "eflames/vault": "master"
+    "eflames/vault": "dev-master"
 
 Run the Composer update command
 
