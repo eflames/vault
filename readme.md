@@ -46,7 +46,7 @@ Vault is a simple yet powerful access control system for the new Laravel 5 Frame
 
 In the `require` key of `composer.json` file add the following
 
-    "rappasoft/vault": "dev-master"
+    "eflames/vault": "master"
 
 Run the Composer update command
 
@@ -57,11 +57,11 @@ In your `config/app.php` add the following to your `$providers` and `$aliases` a
 ```php
 'providers' => [
 
-    App\Providers\EventServiceProvider::class,
-    App\Providers\RouteServiceProvider::class,
+    'App\Providers\EventServiceProvider',
+    'App\Providers\RouteServiceProvider',
     ...
-    Rappasoft\Vault\VaultServiceProvider::class,
-    Illuminate\Html\HtmlServiceProvider::class,
+    'Rappasoft\Vault\VaultServiceProvider',
+    'Illuminate\Html\HtmlServiceProvider',
 
 ],
 ```
@@ -69,10 +69,10 @@ In your `config/app.php` add the following to your `$providers` and `$aliases` a
 ```php
 'aliases' => [
 
-    'App'       => Illuminate\Support\Facades\App::class,
+    'App'       => 'Illuminate\Support\Facades\App',
     ...
-    'Form'		=> Illuminate\Html\FormFacade::class,
-    'HTML'		=> Illuminate\Html\HtmlFacade::class
+    'Form'		=> 'Illuminate\Html\FormFacade',
+    'HTML'		=> 'Illuminate\Html\HtmlFacade'
 
 ],
 ```
@@ -135,13 +135,13 @@ Add the `route middleware` to your app/Http/Kernel.php file:
 
 ```php
 protected $routeMiddleware = [
-    'auth' => App\Http\Middleware\Authenticate::class,
-    'auth.basic' => Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-    'guest' => App\Http\Middleware\RedirectIfAuthenticated::class,
+    'auth' => 'App\Http\Middleware\Authenticate',
+    'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
+    'guest' => 'App\Http\Middleware\RedirectIfAuthenticated',
     ...
-    'vault.routeNeedsRole' => \Rappasoft\Vault\Http\Middleware\RouteNeedsRole::class,
-    'vault.routeNeedsPermission' => \Rappasoft\Vault\Http\Middleware\RouteNeedsPermission::class,
-    'vault.routeNeedsRoleOrPermission' => \Rappasoft\Vault\Http\Middleware\RouteNeedsRoleOrPermission::class,
+    'vault.routeNeedsRole' => 'Rappasoft\Vault\Http\Middleware\RouteNeedsRole',
+    'vault.routeNeedsPermission' => 'Rappasoft\Vault\Http\Middleware\RouteNeedsPermission',
+    'vault.routeNeedsRoleOrPermission' => 'Rappasoft\Vault\Http\Middleware\RouteNeedsRoleOrPermission',
 ];
 ```
 

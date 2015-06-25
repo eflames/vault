@@ -13,31 +13,32 @@ class BladeExtender
 			if ($method == 'attach') continue;
 
 			$blade->extend(function ($value) use ($app, $class, $blade, $method) {
-				return $class->$method($value);
+				return $class->$method($value, $app, $blade);
 			});
 		}
 	}
 
-	public function openRole($value)
+	public function openRole($value, Application $app, Compiler $blade)
 	{
 		$matcher = '/@role\([\'"]([\w\d]*)[\'"]\)/';
 		return preg_replace($matcher, '<?php if (Vault::hasRole(\'$1\')): ?> ', $value);
 	}
 
-	public function closeRole($value)
+	public function closeRole($value, Application $app, Compiler $blade)
 	{
-		return preg_replace("/@endrole/", '<?php endif; ?>', $value);
+		$matcher = $blade->createPlainMatcher('endrole');
+		return preg_replace($matcher, '<?php endif; ?>', $value);
 	}
 
-	public function openPermission($value)
+	public function openPermission($value, Application $app, Compiler $blade)
 	{
 		$matcher = '/@permission\([\'"]([\w\d]*)[\'"]\)/';
 		return preg_replace($matcher, '<?php if (Vault::can(\'$1\')): ?> ', $value);
 	}
 
-	public function closePermission($value)
+	public function closePermission($value, Application $app, Compiler $blade)
 	{
-		$matcher = "/@endpermission/";
+		$matcher = $blade->createPlainMatcher('endpermission');
 		return preg_replace($matcher, '<?php endif; ?>', $value);
 	}
 }
